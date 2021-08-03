@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "birth_year": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string"
+    },
+    "edited": {
+      "type": "string"
+    },
+    "eye_color": {
+      "type": "string"
+    },
+    "films": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "gender": {
+      "type": "string"
+    },
+    "hair_color": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "homeworld": {
+      "type": "string"
+    },
+    "mass": {
+      "type": "string"
+    },
+    "skin_color": {
+      "type": "string"
+    },
+    "species": {
+      "type": "array",
+      "items": {}
+    },
+    "starships": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "vehicles": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "birth_year",
+    "created",
+    "edited",
+    "eye_color",
+    "films",
+    "gender",
+    "hair_color",
+    "height",
+    "homeworld",
+    "mass",
+    "skin_color",
+    "species",
+    "starships",
+    "url",
+    "vehicles"
+  ]
+}
