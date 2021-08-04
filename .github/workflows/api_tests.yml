@@ -19,4 +19,4 @@ jobs:
     - name: Start app
       run: docker run islasgeci make start
     - name: Run API tests
-      run: docker run islasgeci make tests
+      run: docker run islasgeci make tests_api
