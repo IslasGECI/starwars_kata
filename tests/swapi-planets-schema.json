@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "climate": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string"
+        },
+        "diameter": {
+            "type": "string"
+        },
+        "edited": {
+            "type": "string"
+        },
+        "films": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "gravity": {
+            "type": "string"
+        },
+        "orbital_period": {
+            "type": "string"
+        },
+        "population": {
+            "type": "string"
+        },
+        "residents": {
+            "type": "array",
+            "items": {}
+        },
+        "rotation_period": {
+            "type": "string"
+        },
+        "surface_water": {
+            "type": "string"
+        },
+        "terrain": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "climate",
+        "created",
+        "diameter",
+        "edited",
+        "films",
+        "gravity",
+        "orbital_period",
+        "population",
+        "residents",
+        "rotation_period",
+        "surface_water",
+        "terrain",
+        "url"
+    ]
+}
