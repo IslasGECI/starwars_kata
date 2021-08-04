@@ -16,7 +16,7 @@ function test_case(){
     test_name=$1
     test_function=$2
     shift 2
-    if "${test_function}" $@
+    if "${test_function}" "${@}"
     then
         echo "PASS: ${test_name}"
     else
