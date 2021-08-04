@@ -6,36 +6,70 @@ source src/helper.sh
 export API_URL="https://swapi.dev/api/"
 
 # Test the people endpoint
-# Person 1 is equal to expected person
+test_name="Person 1 is equal to expected person"
 endpoint="people/1/"
 expected_json="tests/expected-people.json"
-assert_equal "${endpoint}" "${expected_json}"
+if assert_equal "${endpoint}" "${expected_json}"
+then
+    echo "OK: ${test_name}"
+else
+    echo "FAIL: ${test_name}"
+    exit 1
+fi
 
-# Person 2 is valid
+test_name="Person 2 is valid"
 endpoint="people/2/"
 schema="tests/swapi-people-schema.json"
-validate_json "${endpoint}" "${schema}"
+if validate_json "${endpoint}" "${schema}"
+then
+    echo "OK: ${test_name}"
+else
+    echo "FAIL: ${test_name}"
+    exit 1
+fi
 
 # Test the planets endpoint
-# Planet 3 is equal to expected planet
+test_name="Planet 3 is equal to expected planet"
 endpoint="planets/3/"
 expected_json="tests/expected-planets.json"
-assert_equal "${endpoint}" "${expected_json}"
+if assert_equal "${endpoint}" "${expected_json}"
+then
+    echo "OK: ${test_name}"
+else
+    echo "FAIL: ${test_name}"
+    exit 1
+fi
 
-# Planet 2 is valid
+test_name="Planet 2 is valid"
 endpoint="planets/2/"
 schema="tests/swapi-planets-schema.json"
-validate_json "${endpoint}" "${schema}"
-
+if validate_json "${endpoint}" "${schema}"
+then
+    echo "OK: ${test_name}"
+else
+    echo "FAIL: ${test_name}"
+    exit 1
+fi
 
 # Test the starships endpoint
-# Starship 9 is equal to expected starship
+test_name="Starship 9 is equal to expected starship"
 endpoint="starships/9/"
 expected_json="tests/expected-starships.json"
-assert_equal "${endpoint}" "${expected_json}"
+if assert_equal "${endpoint}" "${expected_json}"
+then
+    echo "OK: ${test_name}"
+else
+    echo "FAIL: ${test_name}"
+    exit 1
+fi
 
-# Starship 2 is valid
+test_name="Starship 2 is valid"
 endpoint="starships/2/"
 schema="tests/swapi-starships-schema.json"
-validate_json "${endpoint}" "${schema}"
-
+if validate_json "${endpoint}" "${schema}"
+then
+    echo "OK: ${test_name}"
+else
+    echo "FAIL: ${test_name}"
+    exit 1
+fi
