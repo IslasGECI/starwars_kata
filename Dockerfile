@@ -17,6 +17,7 @@ RUN apt update && apt install --yes \
     libssl-dev \
     make \
     pip \
+    shellcheck \
     zlib1g-dev
 RUN pip install \
     jsonschema
