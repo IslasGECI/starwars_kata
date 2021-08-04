@@ -3,7 +3,9 @@
 	clean \
 	coverage \
 	mutants \
-	tests
+	tests \
+	tests_api \
+	tests_shell
 
 check:
 	shellcheck --shell=bash src/*
@@ -18,6 +20,10 @@ coverage:
 mutants:
 	@echo "🏹😞 No mutation testing on Bash 👾🎉👾"
 
-tests:
+tests: tests_api tests_shell
+
+tests_api:
 	tests/test_swapi.sh
+
+tests_shell:
 	shellspec --shell bash tests
