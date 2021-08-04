@@ -18,6 +18,12 @@ endpoint="people/2/"
 schema="tests/swapi-people-schema.json"
 test_case "${test_name}" "${test_function}" "${endpoint}" "${expected_json}"
 
+test_name="Person 2 is different to expected person"
+test_function="assert_not_equal"
+endpoint="people/2/"
+expected_json="tests/expected-people.json"
+test_case "${test_name}" "${test_function}" "${endpoint}" "${expected_json}"
+
 # Test the planets endpoint
 test_name="Planet 3 is equal to expected planet"
 test_function="assert_equal"
