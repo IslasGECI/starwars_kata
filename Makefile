@@ -21,8 +21,8 @@ mutants:
 	@echo "🏹😞 No mutation testing on Bash 👾🎉👾"
 
 start:
-	@echo "Starting API:"
-	# Replace this command with the one that starts the API
+	@echo "Stating API:"
+	# Replace the command 'sleep 100' with the command that starts your API
 	sleep 100
 
 tests: tests_api tests_shell
