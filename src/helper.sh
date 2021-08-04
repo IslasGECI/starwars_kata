@@ -11,3 +11,16 @@ function validate_json(){
     curl --output obtained.json --show-error --silent "${API_URL}${endpoint}"
     jsonschema --instance obtained.json "${schema}"
 }
+
+function test_case(){
+    test_name=$1
+    test_function=$2
+    shift 2
+    if "${test_function}" $@
+    then
+        echo "PASS: ${test_name}"
+    else
+        echo "FAIL: ${test_name}"
+        exit 1
+    fi
+}
