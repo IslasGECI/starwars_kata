@@ -18,7 +18,7 @@ endpoint="people/2/"
 schema="tests/swapi-people-schema.json"
 test_case "${test_name}" "${test_function}" "${endpoint}" "${expected_json}"
 
-test_name="Person 2 is different to expected person"
+test_name="Person 2 is not equal to expected person"
 test_function="assert_not_equal"
 endpoint="people/2/"
 expected_json="tests/expected-people.json"
