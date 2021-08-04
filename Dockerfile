@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 WORKDIR /workdir
+COPY . .
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH="/root/.local/lib/shellspec:$PATH"
 ENV TZ=US/Pacific
