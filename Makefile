@@ -20,6 +20,9 @@ coverage:
 mutants:
 	@echo "🏹😞 No mutation testing on Bash 👾🎉👾"
 
+start:
+	@echo "▶️ Starting API:"
+
 tests: tests_api tests_shell
 
 tests_api:
