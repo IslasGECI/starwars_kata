@@ -2,6 +2,7 @@
 	check \
 	clean \
 	coverage \
+	mutants \
 	tests
 
 check:
@@ -13,6 +14,9 @@ clean:
 
 coverage:
 	shellspec --kcov --kcov-options "--include-path=src" --shell bash tests
+
+mutants:
+	@echo "🏹😞 No mutation testing on Bash 👾🎉👾"
 
 tests:
 	tests/test_swapi.sh
